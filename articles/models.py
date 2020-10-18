@@ -19,3 +19,6 @@ class Article(models.Model):
         #It won't just  return <QuertySet [<Article: Article object (1)>]>
         #Now it will return the title
         return self.title
+
+    def snippet(self):
+        return self.body[:50] + "..."
