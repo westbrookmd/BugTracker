@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 # Create your models here.
 # remember to python manage.py makemigrations and python manage.py migrate
@@ -11,7 +11,7 @@ class Article(models.Model):
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     thumb = models.ImageField(default='default.png', blank=True)
-    #add in author
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
 
 #This defines how articles will look in admin section and in the shell
     def __str__(self):
