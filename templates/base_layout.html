@@ -1,46 +1,101 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% bootstrap_messages %}
 {% load static %}
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Articles</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style type="text/css">
+      .sidenav {
+        height:100%;
+        width:12%;
+        position: fixed;
+        z-index:1;
+        top:0;
+        left:0;
+        background-color:#111;
+        overflow-x: hidden;
+        padding-top:20px;
+      }    
+  
+                  .sidenav a {
+        padding:6px 8px 6px 16px;
+        text-decoration: none;
+        font-size:25px;
+        color: #818181;
+        display:block;
+      }  
+    
+                  .sidenav a:hover{
+        color:#f1f1f1;
+      }
+       
+  
+                  .main{
+        margin-left:160px;
+        padding: 0px 10px;
+      }
+      .topcorner{
+        position:absolute;
+        top:10px;
+        right:10px;
+        float:right;
+      }   
+      </style>
+
+
   </head>
   <body>
-    <header class="wrapper">
-      <h1><a href="{% url 'home'%}"> Home
-        <!--Commenting out the logo for now! -->
-        <!--<img src="{% static 'logo.png'%}"/> -->
-      </a>
-    </h1>
-      <nav>
-        <ul>
+    
+      <div class = "sidenav">
+        
+      
+        <a href="{% url 'home'%}"> Home</a>
+            <!--Commenting out the logo for now! -->
+            <!--<img src="{% static 'logo.png'%}"/> -->
+        
+        
+        
           {% if user.is_authenticated %}
-          <li>
-            <a href="{% url 'bugs:bugs' %}">My Bugs</a>
-          </li>
-          <li>
-            <a href="{% url 'accounts:myarticles' %}">My Articles</a>
-          </li>
-          <li>
-            <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
-              {% csrf_token %}
-              <button type="submit">Logout</button>
-            </form>
-          </li>
-          <li><a href="{% url 'articles:create'%}" class ="highlight">Create an Article</a></li>
-          <li><a href="{% url 'bugs:create'%}" class ="highlight">Report a Bug</a></li>
-          {% else %}
-            <li> <a href="{% url 'accounts:login' %}">Login</a> </li>
-            <li> <a href="{% url 'accounts:signup' %}">Signup</a> </li>
-          {% endif %}
-        </ul>
-      </nav>
-    </header>
+        
+         <a href="{% url 'bugs:bugs' %}">My Bugs</a>
+          
+          
+          <a href="{% url 'accounts:myarticles' %}">My Articles</a>
+        </div>
+            
+              <div class = "logoutPos">      
+                <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                  {% csrf_token %}
+                  {% buttons %}
+                  <button type="submit" class="btn btn-dark">Logout</button>
+                  {% endbuttons %}
+                </form>
+              </div>
+              <div class = "createPos">
+              <a href="{% url 'articles:create'%}" class ="highlight">Create an Article</a>
+              <a href="{% url 'bugs:create'%}" class ="highlight">Report a Bug</a>
+            {% else %}
+                <a href="{% url 'accounts:login' %}">Login</a> 
+                <a href="{% url 'accounts:signup' %}">Signup</a> 
+            {% endif %}
+            </div>
+        
+      
+    
     <div class="wrapper">
       {% block content%}
       {% endblock %}
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>

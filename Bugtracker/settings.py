@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'articles',
     'accounts',
     'bugs',
+    'bootstrap4',
     'csvimport.app.CSVImportConf',
 ]
 
