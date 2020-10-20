@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
+from articles.models import Article
 
 # Create your views here.
 def signup_view(request):
@@ -35,3 +36,21 @@ def logout_view(request):
     if request.method == 'POST':
         logout(request)
         return redirect('articles:list')
+
+def myarticles_view(request):
+    if request.method == 'GET':
+        myusername = request.user.username
+        myarticles = Article.objects.all()
+        #for articles in myarticles:
+            #articles.pk = None
+            #articles.save()
+        for articles in myarticles:
+            temp_author_storage = articles.author
+            article_name = str(temp_author_storage)
+            myarticle_ids = []
+            if article_name == myusername:
+                myarticle_ids.append(articles)
+        return render(request, 'accounts/myarticles.html', {'articles': myarticle_ids})
+    else:
+        form = UserCreationForm()
+        return render(request, 'accounts/signup.html', {'form':form})

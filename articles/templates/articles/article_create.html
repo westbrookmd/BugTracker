@@ -2,14 +2,14 @@
 
 {% block content %}
 <div class="create-article">
-  <h2>Create a New Article</h2>
+  <h2>Report a Bug</h2>
   <form class="site-form" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value="Create">
+    <input type="submit" value="Report">
   </form>
 </div>
-<script src="/static/slugify.js"> 
+<script src="/static/slugify.js">
 
 </script>
 
