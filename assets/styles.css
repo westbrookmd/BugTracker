@@ -41,9 +41,13 @@ nav{
 }
 
 nav li{
-    display: inline-block;
-    list-style-type: none;
-    margin-left: 20px;
+    float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px
 }
 
 nav button{
@@ -100,6 +104,55 @@ nav button{
 }
 
 .article-detail  .article p{
+    margin: 10px 20px
+}
+
+.bugs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.bug{
+    padding: 10px;
+    border: 1px solid #00dba0;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.bugs h2{
+    font-size: 1.2em;
+}
+
+.bugs .author{
+    padding: 10px;
+    background: #00dba0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    color: #0f121f;
+}
+
+.bugs-detail .bugs{
+    padding: 0;
+}
+
+.bugs-detail  .bugs img{
+    max-width: 100%;
+}
+
+.bugs-detail  .bugs h2{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2em
+}
+
+.bugs-detail .bugs h3{
+    text-align: center;
+}
+
+.bugs-detail  .bugs p{
     margin: 10px 20px
 }
 

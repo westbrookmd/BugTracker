@@ -7,6 +7,7 @@ from . import forms
 
 def article_list(request):
     articles = Article.objects.all().order_by('date')
+    print("ArticleViews sees articles has this in it: " + str(articles))
     return render(request, 'articles/article_list.html', {'articles': articles})
 
 def article_detail(request, slug):

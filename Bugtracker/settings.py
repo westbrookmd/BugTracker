@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'articles',
     'accounts',
+    'bugs',
+    'csvimport.app.CSVImportConf',
 ]
 
 MIDDLEWARE = [

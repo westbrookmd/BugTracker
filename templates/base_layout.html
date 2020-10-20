@@ -18,6 +18,9 @@
         <ul>
           {% if user.is_authenticated %}
           <li>
+            <a href="{% url 'bugs:bugs' %}">My Bugs</a>
+          </li>
+          <li>
             <a href="{% url 'accounts:myarticles' %}">My Articles</a>
           </li>
           <li>
@@ -26,7 +29,8 @@
               <button type="submit">Logout</button>
             </form>
           </li>
-          <li><a href="{% url 'articles:create'%}" class ="highlight">Report a Bug</a></li>
+          <li><a href="{% url 'articles:create'%}" class ="highlight">Create an Article</a></li>
+          <li><a href="{% url 'bugs:create'%}" class ="highlight">Report a Bug</a></li>
           {% else %}
             <li> <a href="{% url 'accounts:login' %}">Login</a> </li>
             <li> <a href="{% url 'accounts:signup' %}">Signup</a> </li>

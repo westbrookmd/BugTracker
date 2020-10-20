@@ -1,0 +1,13 @@
+{% extends 'base_layout.html' %}
+
+{% block content%}
+<div class="bugs-detail">
+  <div class="bugs">
+    <img src="{{bugs.thumb.url}}" />
+    <h2>{{bug.title}}</h2>
+    <p>{{bug.body}}</p>
+    <p>{{bug.date}}</p>
+  </div>
+</div>
+
+{% endblock %}
