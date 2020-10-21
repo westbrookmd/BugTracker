@@ -29,6 +29,7 @@ def create(request):
         form = forms.CreateBug()
     return render(request, 'bugs_create.html', {'form':form})
 
+@login_required(login_url="/accounts/login/")
 def mybugs_view(request):
     if request.method == 'GET':
         myusername = request.user.username
