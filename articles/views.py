@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from .models import Article
-from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from . import forms
 
@@ -11,8 +10,8 @@ def article_list(request):
     return render(request, 'articles/article_list.html', {'articles': articles})
 
 def article_detail(request, slug):
-    article = Article.objects.get(slug=slug)
-    return render(request, 'articles/article_detail.html', {'article': article })
+    articles = Article.objects.get(slug=slug)
+    return render(request, 'articles/article_detail.html', {'article': articles })
 
 @login_required(login_url="/accounts/login/")
 def article_create(request):

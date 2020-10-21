@@ -41,15 +41,20 @@ def myarticles_view(request):
     if request.method == 'GET':
         myusername = request.user.username
         myarticles = Article.objects.all()
+        print("Here are all of the articles:" + str(myarticles))
         #for articles in myarticles:
             #articles.pk = None
             #articles.save()
+        myarticle_ids = []
         for articles in myarticles:
             temp_author_storage = articles.author
+            print("For this article:" + str(articles))
             article_name = str(temp_author_storage)
-            myarticle_ids = []
+            print("Article author:" + article_name)
             if article_name == myusername:
+                print("Article_name is equal to myusername!")
                 myarticle_ids.append(articles)
+                print("Current list of articles that match my username:" + str(myarticle_ids))
         return render(request, 'accounts/myarticles.html', {'articles': myarticle_ids})
     else:
         form = UserCreationForm()

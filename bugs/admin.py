@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Bugs
 
-# Register your models here.
+# Make articles viewable on Django admin/ page
+admin.site.register(Bugs)

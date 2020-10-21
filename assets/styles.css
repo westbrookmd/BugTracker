@@ -27,7 +27,7 @@ a, a:hover, a:visited{
 div.wrapper > h1{
     text-align: center;
     margin: 100px auto;
-    font-size: 2.4em
+    font-size: 2.4em;
 }
 
 header{
@@ -81,6 +81,7 @@ nav button{
     border: 1px solid #00dba0;
     position: relative;
     padding-bottom: 40px;
+    left:12%;
 }
 
 .article h2{
@@ -98,17 +99,22 @@ nav button{
 }
 
 .article-detail .article{
-    padding: 0;
+    padding: 10;
+    top:100px;
 }
 
 .article-detail  .article img{
-    max-width: 100%;
+    padding: 20;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .article-detail  .article h2{
     text-align: center;
     margin: 20px auto;
-    font-size: 2em
+    font-size: 2em;
 }
 
 .article-detail .article h3{
@@ -116,7 +122,7 @@ nav button{
 }
 
 .article-detail  .article p{
-    margin: 10px 20px
+    margin: 10px 20px;
 }
 
 .bugs{
@@ -130,6 +136,7 @@ nav button{
     border: 1px solid #00dba0;
     position: relative;
     padding-bottom: 40px;
+    left:12%;
 }
 
 .bugs h2{
@@ -146,26 +153,32 @@ nav button{
     color: #0f121f;
 }
 
-.bugs-detail .bugs{
+.bugs-detail .bug{
     padding: 0;
+    top:100px;
 }
 
-.bugs-detail  .bugs img{
-    max-width: 100%;
+.bugs-detail  .bug img{
+    padding: 20;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-.bugs-detail  .bugs h2{
+.bugs-detail  .bug h2{
     text-align: center;
     margin: 20px auto;
-    font-size: 2em
+    font-size: 2em;
 }
 
-.bugs-detail .bugs h3{
+.bugs-detail .bug h3{
     text-align: center;
 }
 
-.bugs-detail  .bugs p{
-    margin: 10px 20px
+.bugs-detail  .bug p{
+    text-align: left;
+    margin: 10px 20px;
 }
 
 .site-form {
@@ -199,7 +212,7 @@ a.highlight{
     list-style-type: none;
     border: 1px solid #FF5722;
     margin: 10px 0;
-    color: #FF5722
+    color: #FF5722;
 }
 
 .errorlist{
