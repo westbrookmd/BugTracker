@@ -9,6 +9,8 @@ class Bugs(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     thumb = models.ImageField(default='default.png', blank=True)
     author = models.CharField(max_length=100)
+    state = models.CharField(max_length=100, default='open')
+    class_name = models.CharField(max_length=100, default='General', blank=True)
 
 #This defines how articles will look in admin section and in the shell
     def __str__(self):
