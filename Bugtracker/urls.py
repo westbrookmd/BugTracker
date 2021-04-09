@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns, static
 from django.conf import settings
-from articles import views as article_views
+from . import views
+
+#from articles import views as article_views
 
 
 urlpatterns = [
@@ -28,6 +29,7 @@ urlpatterns = [
     path('', views.homepage, name="home"),
     path('accounts/', include('accounts.urls')),
     path('bugs/', include('bugs.urls')),
+    path('charts/', include('charts.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

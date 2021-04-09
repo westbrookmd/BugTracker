@@ -47,3 +47,4 @@ def mybugs_view(request):
     else:
         form = UserCreationForm()
         return render(request, 'accounts/signup.html', {'form':form})
+        

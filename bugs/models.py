@@ -12,6 +12,7 @@ class Bugs(models.Model):
     state = models.CharField(max_length=100, default='open')
     class_name = models.CharField(max_length=100, default='General', blank=True)
 
+
 #This defines how articles will look in admin section and in the shell
     def __str__(self):
         #This line makes it so that when Article.object.all() is called,
@@ -21,3 +22,4 @@ class Bugs(models.Model):
 
     def snippet(self):
         return str(self.body)[:50] + "..."
+        
