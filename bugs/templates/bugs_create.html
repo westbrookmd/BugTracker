@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="create-bug">
+  <h2>Report a Real Bug</h2>
+  <form class="site-form" action="{% url 'bugs:create' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Report">
+  </form>
+</div>
+<script src="/static/slugify.js">
+
+</script>
+
+{% endblock %}
