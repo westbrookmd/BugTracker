@@ -1,6 +1,5 @@
 body{
-    background-color: #0f121f;
-    background-image: url(/static/stars.png);
+    background-color: #23252b;
     background-repeat-y: no-repeat;
     color: #fff;
 }
@@ -78,7 +77,7 @@ nav button{
 
 .article{
     padding: 10px;
-    border: 1px solid #00dba0;
+    border: 1px solid #ffa844;
     position: relative;
     padding-bottom: 40px;
     left:12%;
@@ -90,7 +89,7 @@ nav button{
 
 .article .author{
     padding: 10px;
-    background: #00dba0;
+    background:#69b5fc;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -133,7 +132,7 @@ nav button{
 
 .bug{
     padding: 10px;
-    border: 1px solid #00dba0;
+    border: 1px solid#ffa844;
     position: relative;
     padding-bottom: 40px;
     left:12%;
@@ -145,7 +144,7 @@ nav button{
 
 .bugs .author{
     padding: 10px;
-    background: #00dba0;
+    background:#69b5fc;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -183,7 +182,7 @@ nav button{
 
 .site-form {
     margin-top: 60px;
-    border: 1px solid #00dba0;
+    border: 1px solid#ffa844;
     padding: 20px;
 }
 
@@ -194,10 +193,17 @@ nav button{
 }
 
 a.highlight{
-    border: 1px solid #00dba0;
+    border: 1px solid#ffa844;
     padding: 10px;
     border-radius: 4px;
-    color: #00dba0;
+    color:#ffa844;
+}
+
+a.highlight2{
+    border: 3px solid#ffa844;
+    padding: 5px;
+    border-radius: 4px;
+    color:#ffa844;
 }
 
 .helptext, .helptext ul{
@@ -220,7 +226,7 @@ a.highlight{
 }
 
 .site-form input[type="submit"]{
-    background: #00dba0;
+    background:#ffa844;
     border: 0;
     color: #fff;
     font-size: 20px;

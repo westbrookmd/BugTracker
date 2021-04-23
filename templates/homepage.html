@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Homepage</title>
-  </head>
-  <body>
-    <h1>This is the homepage </h1>
-    <p>Welcome to my Bugtracker</p>
-  </body>
-</html>
+{% extends 'base_layout.html'%}
+
+{% block content %}
+    <h1>Bug Tracker Website</h1>
+    <p>
+        Welcome to my Bugtracker website! This site is a work in progress. I am using this as a tool to learn Python, Django, and Web Development basics. If you  need to contact me, you may submit a form on my website, <a href="https://www.marshallwestbrook.com">marshallwestbrook.com </a>
+    </p>
+
+{% endblock %}

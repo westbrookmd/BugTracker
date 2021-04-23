@@ -11,6 +11,19 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
+sentry_sdk.init(
+    dsn="https://7fa4dcfbeb2a4798896c196950406a93@o510931.ingest.sentry.io/5607307",
+    integrations=[DjangoIntegration()],
+    traces_sample_rate=1.0,
+
+    # If you wish to associate users to errors (assuming you are using
+    # django.contrib.auth) you may enable sending PII data.
+    send_default_pii=True,
+    debug=True
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +33,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=k@c5f!%g1_xul%xk-xj&ac&507hn=n0wytm%*a1^6_o0r+se)'
+secretFile = open('secret_file.txt')
+SECRET_KEY = secretFile.read()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,6 +45,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'charts.apps.ChartsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +57,7 @@ INSTALLED_APPS = [
     'bugs',
     'bootstrap4',
     'csvimport.app.CSVImportConf',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -127,6 +143,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "assets",
 ]
+
 
 MEDIA_URL = '/media/'
 

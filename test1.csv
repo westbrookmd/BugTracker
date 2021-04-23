@@ -1,0 +1,45 @@
+Name,Sex,Survived,Age,ticket_class,embarked
+john,,N,20,Premium,Y
+Jones,Pencil,Y,21,Premium,Y
+Kivell,Binder,N,22,Premium,Y
+Jardine,Pencil,Y,23,Premium,Y
+Gill,Pen,N,24,Premium,Y
+Sorvino,Pencil,Y,25,Premium,Y
+Jones,Binder,N,26,Premium,Y
+Andrews,Pencil,Y,27,Premium,Y
+Jardine,Pencil,N,28,Premium,Y
+Thompson,Pencil,Y,29,Premium,Y
+Jones,Binder,N,30,Premium,Y
+Morgan,Pencil,Y,31,Premium,Y
+Howard,Binder,N,32,Premium,Y
+Parent,Binder,Y,33,Premium,Y
+Jones,Pencil,N,34,Premium,Y
+Smith,Desk,Y,35,Premium,Y
+Jones,Pen Set,N,36,Premium,Y
+Morgan,Binder,Y,37,Premium,Y
+Jones,Pen,N,38,Premium,Y
+Parent,Pen,Y,39,Premium,Y
+Kivell,Pen Set,N,40,Premium,Y
+Smith,Pencil,Y,41,Premium,Y
+Parent,Pen Set,N,42,Premium,Y
+Gill,Binder,Y,43,Premium,Y
+Smith,Binder,N,44,Premium,Y
+Jones,Binder,Y,45,Premium,Y
+Sorvino,Binder,N,46,Premium,Y
+Jardine,Pen Set,Y,47,Premium,Y
+Andrews,Pencil,N,48,Premium,Y
+Howard,Pen,Y,49,Premium,Y
+Gill,Pencil,N,50,Premium,Y
+Gill,Binder,Y,51,Premium,Y
+Kivell,Desk,N,52,Premium,Y
+Jones,Pen Set,Y,53,Premium,Y
+Morgan,Pen Set,N,54,Premium,Y
+Kivell,Pen Set,Y,55,Premium,Y
+Sorvino,Desk,N,56,Premium,Y
+Gill,Pencil,Y,57,Premium,Y
+Sorvino,Pen,N,58,Premium,Y
+Thompson,Binder,Y,59,Premium,Y
+Andrews,Pencil,N,60,Premium,Y
+Jardine,Binder,Y,61,Premium,Y
+Jardine,Binder,N,62,Premium,Y
+Andrews,Binder,Y,63,Premium,Y
